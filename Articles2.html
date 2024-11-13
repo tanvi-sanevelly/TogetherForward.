@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Together Forward</title>
+    <link rel="stylesheet" href="styles7.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="http://127.0.0.1:5500/Index.html">Home</a>
+                <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+                <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+                <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+                <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+                <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+            </div>
+                <div class="language-switch">
+                    <select name="language" id="language">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+
+        <header class="header">
+            <div class="image-placeholder">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSba-zYIPZa3taVV6HSQRbDcOquF5OoPIl3WQ&s" style="width:500px;height:300px;">" 
+                </div>
+            <div class="article-title">
+                Diversity, Equity and Inclusion in the Workplace
+                <div class="text-box">Describing the use of DEI in workplaces all across the world, making sure all people get equal opportunities.</div>
+        </div>
+            <div class="image-placeholder">
+                <img src="https://images.squarespace-cdn.com/content/v1/61782ecbf6567d12f08ba3b9/5bfaa290-a3f8-41e8-921e-172abebb3dce/Copy+of+Cultivating+Diversity%2C+Equity+%26+Inclusion+in+the+Workplace+-+Title+%231.png" style="width:500px;height:300px;">
+            </div>
+        </header>
+    
+        <main class="main-content">
+            <div class="content-section">
+                <div class="content-box">
+                    DEI in Workplace: Is it Worth it?
+                    <div class="text-box">Workplace diversity, equity and inclusion efforts, or DEI, are increasingly becoming part of national political debates. For a majority of employed U.S. adults (56%), focusing on increasing DEI at work is a good thing, according to a new Pew Research Center survey. But opinions about DEI vary considerably along demographic and political lines.
+                            
+                        Most workers have some experience with DEI measures at their workplace. About six-in-ten (61%) say their company or organization has policies that ensure fairness in hiring, pay or promotions, and 52% say they have trainings or meetings on DEI at work. Smaller shares say their workplace has a staff member who promotes DEI (33%), that their workplace offers salary transparency (30%), and that it has affinity groups or employee resource groups based on a shared identity (26%). Majorities of those who have access to these measures say each has had a positive impact where they work.</div>
+                </div>
+                <div class="content-box">
+                    Key Findings of Survey
+                    <div class="text-box">
+
+                        Relatively small shares of workers place a lot of importance on diversity at their workplace. About three in ten say it is extremely or very important to them to work somewhere with a mix of employees of different races and ethnicities (32%) or ages (28%). Roughly a quarter say the same about having a workplace with about an equal mix of men and women (26%) and 18% say this about a mix of employees of different sexual orientations.
+                       More than half of workers (54%) say their company or organization pays about the right amount of attention to increasing DEI. Smaller shares say their company or organization pays too much (14%) or too little attention (15%), and 17% say they’re not sure. Black workers are more likely than those in other racial and ethnic groups to say their employer pays too little attention to increasing DEI. They’re also among the most likely to say focusing on DEI at work is a good thing (78% of Black workers say this), while White workers are the least likely to express this view (47%).
+</div>
+                </div>
+            </div>
+            <div class="image-placeholder">
+                <img src="https://images.squarespace-cdn.com/content/v1/61782ecbf6567d12f08ba3b9/2bee1425-e8c2-4fda-8079-abbd59a92baf/V1_Kevin-CultureAlly_DEI+Resources+%232_1000X2000px_AVA_20NOV2023+%281%29.png" style="width:70%;height:90%">
+            </div>
+            <div class="image-placeholder">
+                <img src="https://www.pockethrms.com/wp-content/uploads/2021/12/Benefits-of-DWI-in-workplace-infographic-1-scaled.jpg" style="width:70%;height:90%">
+            </div>
+        </main>
+
+        <!-- Chatbot container with iframe and button -->
+    <div class="chatbot-container">
+        <!-- Chatbot iframe (hidden initially) -->
+        <iframe
+            class="chatbot-iframe"
+            allow="microphone;"
+            width="350"
+        height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+        </iframe>
+
+        <!-- Chatbot toggle button -->
+        <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+    </div>
+
+    <!-- JavaScript for toggling the chatbot iframe -->
+    <script>
+        function toggleChat() {
+            const iframe = document.querySelector('.chatbot-iframe');
+            const button = document.querySelector('.chat-button');
+
+            if (iframe.style.display === 'none' || iframe.style.display === '') {
+                iframe.style.display = 'block';
+                button.textContent = 'Close AI Chat';
+            } else {
+                iframe.style.display = 'none';
+                button.textContent = 'Open AI Chat';
+            }
+        }
+    </script>
+
+</body>
+</html>
+

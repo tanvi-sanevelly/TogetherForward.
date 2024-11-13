@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Together Forward</title>
+    <link rel="stylesheet" href="styles8.css">
+    <link rel="stylesheet" href="navbar.css">
+
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5500/Index.html">Home</a>
+            <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+            <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+            <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+            <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+            <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+        </div>
+        <div class="language-switch">
+            <select name="language" id="language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+</nav>
+
+<body>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search bar">
+    </div>
+
+    <div class="content-grid">
+        <div class="activity-section">
+            <div class="activity-name">Crossing the Line</div>
+            <div class="text-box">Participants understand the effects of prejudice, ridicule, teasing and bullying</div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnfiqXHA1aoiD5tzePzr-hs3668z--lxIz9g&s" alt="Image 1">
+            </div>
+            <div class="column">
+                <img src="https://i.pinimg.com/736x/ef/81/ec/ef81ecc6726c1da26c31529f51d8bfca.jpg" alt="Image 2">
+            </div>
+            <div class="column">
+                <img src="https://c8.alamy.com/comp/BK0E3P/business-people-crossing-a-red-line-BK0E3P.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+              
+
+    <div class="main-content">
+        <div class="content-how">
+            How To: Instructions for Activity:
+            <div class="text-box">Instructions:
+
+                At first, use masking tape or any other material to draw a line down the middle of the floor. Next, have all of your staff stand on one side of the line.
+                Now, let your staff know that you’ll be asking random questions. For any question or situation that relates to them, they can cross the line.
+                (Note: Some of the questions could include some of the following:
+                
+                How many of you hated being picked last for a game in gym class?
+                
+                
+                How many of you were nervous to start on your first day of work at our company?
+                
+                Then, start asking your questions and, after each one, take notice of how many employees cross the line. It’s a good idea to have about 10-15 questions ready.
+                After the questions have all been asked, tell everyone to stop and look around.
+                Debrief: The goal here is to demonstrate that we are all the same deep down. We just have to take the time to learn a few things about each other. Point out to your employees that, while they may all seem different at first glance, they are a lot more similar than they may think.</div>
+        </div>
+        <div class="video-section">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gFUQV5aWTxk?si=Xm3zQBSLnGsXV-AI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="video-caption">A Tutorial on Crossing the Line</div>
+        </div>
+    </div>
+
+ <!-- Chatbot container with iframe and button -->
+ <div class="chatbot-container">
+    <!-- Chatbot iframe (hidden initially) -->
+    <iframe
+        class="chatbot-iframe"
+        allow="microphone;"
+        width="350"
+    height="430"
+        src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+    </iframe>
+
+    <!-- Chatbot toggle button -->
+    <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+</div>
+
+<!-- JavaScript for toggling the chatbot iframe -->
+<script>
+    function toggleChat() {
+        const iframe = document.querySelector('.chatbot-iframe');
+        const button = document.querySelector('.chat-button');
+
+        if (iframe.style.display === 'none' || iframe.style.display === '') {
+            iframe.style.display = 'block';
+            button.textContent = 'Close AI Chat';
+        } else {
+            iframe.style.display = 'none';
+            button.textContent = 'Open AI Chat';
+        }
+    }
+</script>
+
+</body>
+</html>
+

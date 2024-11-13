@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Together Forward</title>
+<link rel="stylesheet" href="styles6.css">
+<link rel="stylesheet" href="navbar.css">
+
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5500/Index.html">Home</a>
+            <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+            <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+            <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+            <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+            <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+        </div>
+        <div class="language-switch">
+            <select name="language" id="language">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+    </nav>
+    
+
+
+     <!-- Header -->
+    <header>
+        <h1>Want to get more out of this?? Sign up to our weekly newsletter here!!</h1>
+    </header>
+
+      <!-- Form Layout -->
+      <div class="container">
+        <!-- Left Side: Email and Full Name -->
+        <div class="left-side">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Type here...">
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Type here...">
+        </div>
+
+        <!-- Right Side: Topic Interests and Email Permissions -->
+        <div class="right-side">
+            <label>Topic Interests:</label>
+            <div class="topics">
+                <div>
+                    <input type="checkbox" id="topic1"> 
+                    Intentional inclusion
+                    <input type="checkbox" id="topic2"> Socioeconomic status
+                    <input type="checkbox" id="topic3"> Mental health
+                </div>
+                <div>
+                    <input type="checkbox" id="topic4"> Equity
+                    <input type="checkbox" id="topic5"> Cultural competence
+                    <input type="checkbox" id="topic6"> Diversity
+                </div>
+            </div>
+
+            <div class="permission">
+                <input type="checkbox" id="emailPermission">
+                <p>Yes, I want to receive email communications regarding my topic interests and suggestions of different activities related to DEI from Together Forward.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subscribe Button -->
+    <div class="subscribe-container">
+        <button onclick="subscribe()">Subscribe</button>
+    </div>
+
+
+ <!-- Chatbot container with iframe and button -->
+ <div class="chatbot-container">
+    <!-- Chatbot iframe (hidden initially) -->
+    <iframe
+        class="chatbot-iframe"
+        allow="microphone;"
+        width="350"
+    height="430"
+        src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+    </iframe>
+
+    <!-- Chatbot toggle button -->
+    <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+</div>
+
+<!-- JavaScript for toggling the chatbot iframe -->
+<script>
+    function toggleChat() {
+        const iframe = document.querySelector('.chatbot-iframe');
+        const button = document.querySelector('.chat-button');
+
+        if (iframe.style.display === 'none' || iframe.style.display === '') {
+            iframe.style.display = 'block';
+            button.textContent = 'Close AI Chat';
+        } else {
+            iframe.style.display = 'none';
+            button.textContent = 'Open AI Chat';
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

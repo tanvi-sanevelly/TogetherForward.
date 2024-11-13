@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Together Forward</title>
+    <link rel="stylesheet" href="styles5.css">
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="nav-links">
+                <a href="http://127.0.0.1:5500/Index.html">Home</a>
+                <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+                <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+                <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+                <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+                <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+            </div>
+            <div class="language-switch">
+                <select name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+        </div>
+            </div>
+        </nav>
+        
+        <body>
+                
+    
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Chat Area -->
+        <div class="chat-container">
+            <div class="messages" id="messageContainer">
+                <!-- Messages will be populated by JavaScript -->
+            </div>
+            <div class="message-input-container">
+                <input type="file" id="fileInput" style="display: none;">
+                <button onclick="document.getElementById('fileInput').click()">📎</button>
+                <input type="text" class="message-input" id="messageInput" 
+                       placeholder="Type your message here...">
+                <button onclick="sendMessage()">➤</button>
+        </div>
+        </div>
+
+         
+
+    <!-- Professionals Section -->
+        <div class="professionals-section">
+            <h3>Personally chat with professionals</h3>
+            <input type="text" class="professional-input" placeholder="Professional 1">
+            <input type="text" class="professional-input" placeholder="Professional 2">
+            <input type="text" class="professional-input" placeholder="Professional 3">
+            <div class="profile-image">
+                <img src="https://thumbs.dreamstime.com/b/tree-colorful-human-hands-together-community-team-concept-illustration-culture-diversity-nature-care-teamwork-project-119810521.jpg" style="width:90%;height:90%">
+            </div>
+        </div>
+    </div>
+
+      <!-- Chatbot container with iframe and button -->
+    <div class="chatbot-container">
+        <!-- Chatbot iframe (hidden initially) -->
+        <iframe
+            class="chatbot-iframe"
+            allow="microphone;"
+            width="350"
+        height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+        </iframe>
+
+        <!-- Chatbot toggle button -->
+        <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+    </div>
+
+    <!-- JavaScript for toggling the chatbot iframe -->
+    <script>
+        function toggleChat() {
+            const iframe = document.querySelector('.chatbot-iframe');
+            const button = document.querySelector('.chat-button');
+
+            if (iframe.style.display === 'none' || iframe.style.display === '') {
+                iframe.style.display = 'block';
+                button.textContent = 'Close AI Chat';
+            } else {
+                iframe.style.display = 'none';
+                button.textContent = 'Open AI Chat';
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+    
+
+    <script src="main5.js"></script>
+</body>
+</html>

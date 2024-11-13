@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Together Forward</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <script src="main.js"></script>
+</head>
+
+    <body>
+        <header>
+            <h1>Welcome to Together Forward!</h1>
+        </header>
+    
+        <nav>
+            <div class="nav-links">
+                <a href="http://127.0.0.1:5500/Index.html">Home</a>
+                <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+                <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+                <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+                <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+                <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+            </div>
+            <div class="language-switch">
+                <select name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+                <script>
+                    const translations = {
+        en: {
+            greeting: "Hello",
+            description: "Welcome to our website.",
+            contact: "Contact Us",
+        },
+        es: {
+            greeting: "Hola",
+            description: "Bienvenidos a nuestro sitio web.",
+            contact: "Contáctanos",
+        },
+        fr: {
+            greeting: "Bonjour",
+            description: "Bienvenue sur notre site web.",
+            contact: "Contactez-nous",
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const languageSelector = document.getElementById("language");
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get("lang");
+
+        // Set the language dropdown to the selected language
+        if (lang) {
+            languageSelector.value = lang;
+        }
+
+        // Detect language change
+        languageSelector.addEventListener("change", function() {
+            const selectedLanguage = languageSelector.value;
+            window.location.href = `?lang=${selectedLanguage}`;
+        });
+    });
+                    document.addEventListener("DOMContentLoaded", function() {
+                        const languageSelector = document.getElementById("language");
+                
+                        // Function to update content based on selected language
+                        function updateContent(language) {
+                            const elementsToTranslate = document.querySelectorAll("[data-translate]");
+                            elementsToTranslate.forEach(element => {
+                                const key = element.getAttribute("data-translate");
+                                element.textContent = translations[language][key];
+                            });
+                        }
+                
+                        // Set initial content based on the current language
+                        const initialLang = languageSelector.value;
+                        updateContent(initialLang);
+                
+                        // Listen for changes in the language selector
+                        languageSelector.addEventListener("change", function() {
+                            const selectedLanguage = languageSelector.value;
+                            updateContent(selectedLanguage);
+                        });
+                    });
+                </script>
+            </div>
+        </nav>
+    
+        <div class="search-bar">
+            <input type="text" placeholder="Search here...">
+            <script> document.addEventListener("DOMContentLoaded", function() {
+                const searchInput = document.getElementById("search-input");
+                const contentDiv = document.querySelector(".content");
+            
+                // Function to highlight search term in content
+                function highlightText(searchTerm) {
+                    const content = contentDiv.innerHTML; // Original content with HTML tags
+                    
+                    // Restore original content by removing previous highlights
+                    const restoredContent = content.replace(/<span class="highlight">(.*?)<\/span>/g, "$1");
+                    contentDiv.innerHTML = restoredContent;
+            
+                    if (searchTerm.trim() === "") return; // Exit if search term is empty
+            
+                    // Create a regular expression to find the search term (case-insensitive)
+                    const regex = new RegExp(`(${searchTerm})`, "gi");
+                    
+                    // Replace matching words with highlighted version
+                    const highlightedContent = restoredContent.replace(regex, '<span class="highlight">$1</span>');
+                    contentDiv.innerHTML = highlightedContent;
+                }
+            
+                // Listen for input on the search bar and highlight text
+                searchInput.addEventListener("input", function() {
+                    const searchTerm = searchInput.value;
+                    highlightText(searchTerm);
+                });
+            });</script>
+        </div>
+    
+        <div class="container">
+            <div class="welcome-section">
+                <div class="welcome-text">
+                    <h1>WELCOME!!</h1>
+                    <p>Welcome to your teacher, Together Forward, where a concept unknown will become a concept thoroughly perfect!
+                        Based on all the real-life scenarios, inclusivity, diversity, and equity are seen nowhere in our world and it is time
+                        to change this, ensure the world is at justice, peace, and equality.
+ 
+                    </p>
+                </div>
+                <div class="welcome-image">
+                    <img src="https://www.pwc.com/gx/en/diversity-inclusion/refresh-assets/thumbnail-images/PwC_GlobalID_Hero_670x377.jpg" alt="Various people working together">
+                </div>
+            </div>
+    
+            <div class="content">
+                <h2>Introduction</h2>
+                <p>Here, on our website, you will find everything you need to know about vital aspects in our everyday lives (DEI). For those of you who don't know what DEI is, it is diversity, equity, and inclusivity and we need to start implementing it wherever we can. People all over the world feel alone, and people discriminate based on any foundation. So, it's up to us to change this!!</p>
+            </div>
+        </div>
+    
+        <footer>
+            <p> <div class=" image"
+                <a href="Screenshot 2024-11-05 at 10.33.43 AM.png"> </a>
+                © 2024 Together Forward </p>
+        </footer>
+    
+
+         <!-- Chatbot container with iframe and button -->
+    <div class="chatbot-container">
+        <!-- Chatbot iframe (hidden initially) -->
+        <iframe
+            class="chatbot-iframe"
+            allow="microphone;"
+            width="350"
+        height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+        </iframe>
+
+        <!-- Chatbot toggle button -->
+        <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+    </div>
+
+    <!-- JavaScript for toggling the chatbot iframe -->
+    <script>
+        function toggleChat() {
+            const iframe = document.querySelector('.chatbot-iframe');
+            const button = document.querySelector('.chat-button');
+
+            if (iframe.style.display === 'none' || iframe.style.display === '') {
+                iframe.style.display = 'block';
+                button.textContent = 'Close AI Chat';
+            } else {
+                iframe.style.display = 'none';
+                button.textContent = 'Open AI Chat';
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+ 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Together Forward</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5500/Index.html">Home</a>
+            <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+            <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+            <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+            <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+            <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+        </div>
+            <div class="language-switch">
+                <select name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main class="activities-container">
+       <!-- Activity 1 -->
+       <div class="activity-card">
+        <div class="activity-image">
+           <img src="https://i.ytimg.com/vi/VVudFbSFVOg/mqdefault.jpg"></div>
+        <div class="activity-content">
+                 <h2 class="activity-link">
+                    <a href="http://127.0.0.1:5500/Activities2.html">Crossing the Line</a>
+                </h2>
+                <p class="activity-description">Simple group initiative to explore complex behaviours.</p>
+            </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="activity-card">
+            <div class="activity-image">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH49H_eydT_yHgDjlnK3_35q-H555juYSLmw&s"></div>
+            <div class="activity-content">
+                <h2 class="activity-title">Get Deep with the Iceberg</h2>
+                <p class="activity-description">Dig deep in order to understand someone’s cultural background</p>
+            </div>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="activity-card">
+            <div class="activity-image">
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTajoFzXU4Wgf9AJpBZEIMrx2a3dL3BJrXiBg&s"></div>
+            <div class="activity-content">
+                <h2 class="activity-title">Step Apart, Step Together</h2>
+                <p class="activity-description">Description of activity</p>
+            </div>
+        </div>
+    </section> 
+</main>
+
+    <aside class="suggested-topics">
+        <h3>Other Suggested Topics</h3>
+        <ul>
+            <li>Intersectionality</li>
+            <li>Bias and Unconscious Bias</li>
+            <li>Cultural Competence and Sensitivity</li>
+            <li>Inclusive Leadership</li>
+        </ul>
+    </aside>
+
+     <!-- Chatbot container with iframe and button -->
+     <div class="chatbot-container">
+        <!-- Chatbot iframe (hidden initially) -->
+        <iframe
+            class="chatbot-iframe"
+            allow="microphone;"
+            width="350"
+        height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+        </iframe>
+
+        <!-- Chatbot toggle button -->
+        <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+    </div>
+
+    <!-- JavaScript for toggling the chatbot iframe -->
+    <script>
+        function toggleChat() {
+            const iframe = document.querySelector('.chatbot-iframe');
+            const button = document.querySelector('.chat-button');
+
+            if (iframe.style.display === 'none' || iframe.style.display === '') {
+                iframe.style.display = 'block';
+                button.textContent = 'Close AI Chat';
+            } else {
+                iframe.style.display = 'none';
+                button.textContent = 'Open AI Chat';
+            }
+        }
+    </script>
+
+</body>
+</html>

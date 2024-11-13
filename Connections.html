@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Together Forward</title>
+    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="navbar.css">
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5500/Index.html">Home</a>
+            <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+            <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+            <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+            <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+            <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+        </div>
+            <div class="language-switch">
+                <select name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Explorations and Connections</h1>
+
+    
+
+        <div class="card">
+            <textarea placeholder="Inclusive workplaces promote mental health and well-being, as employees who feel valued and respected experience lower stress levels and greater job satisfaction."></textarea>
+            <p>Anonymous</p>
+            <button class="like-button">❤️</button>
+        </div>
+
+        <div class="card">
+            <textarea placeholder="Diverse and inclusive organizations often outperform those that lack diversity because they bring together varied perspectives, which fosters innovation and better problem-solving."></textarea>
+            <p>Anonymous</p>
+            <button class="like-button">❤️</button>
+        </div>
+
+        <div class="card">
+            <textarea placeholder="In education, DEI ensures that curricula represent diverse perspectives and that all students, regardless of background, have equitable access to resources and opportunities."></textarea>
+            <p>Anonymous</p>
+            <button class="like-button">❤️</button>
+        </div>
+
+        <div class="card">
+ 
+            <textarea placeholder="DEI initiatives can enhance community relations, as businesses and institutions that prioritize inclusivity often have stronger connections with diverse communities, promoting social cohesion and mutual understanding."></textarea>
+            <p>Anonymous</p>
+            <button class="like-button">❤️</button>
+        </div>
+
+        <div class="message-input-container">
+            <input type="file" id="fileInput" style="display: none;">
+            <button onclick="document.getElementById('fileInput').click()">📎</button>
+            <input type="text" class="message-input" id="messageInput" 
+                   placeholder="Type your message here...">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    <!-- Chatbot container with iframe and button -->
+    <div class="chatbot-container">
+        <!-- Chatbot iframe (hidden initially) -->
+        <iframe
+            class="chatbot-iframe"
+            allow="microphone;"
+            width="350"
+        height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+        </iframe>
+
+        <!-- Chatbot toggle button -->
+        <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+    </div>
+
+    <!-- JavaScript for toggling the chatbot iframe -->
+    <script>
+        function toggleChat() {
+            const iframe = document.querySelector('.chatbot-iframe');
+            const button = document.querySelector('.chat-button');
+
+            if (iframe.style.display === 'none' || iframe.style.display === '') {
+                iframe.style.display = 'block';
+                button.textContent = 'Close AI Chat';
+            } else {
+                iframe.style.display = 'none';
+                button.textContent = 'Open AI Chat';
+            }
+        }
+    </script>
+
+
+    <script src="script2.js"></script>
+</body>
+</html>

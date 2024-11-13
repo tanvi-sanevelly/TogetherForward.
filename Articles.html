@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Together Forward</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    </head>
+
+
+    <body>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="http://127.0.0.1:5500/Index.html">Home</a>
+                <a href="http://127.0.0.1:5500/Articles.html">Articles</a>
+                <a href="http://127.0.0.1:5500/Activities.html">Activities</a>
+                <a href="http://127.0.0.1:5500/Connections.html">Connections</a>
+                <a href="http://127.0.0.1:5500/Messaging.html">Chat</a>
+                <a href="http://127.0.0.1:5500/Newsletter.html">Newsletter</a>
+            </div>
+                <div class="language-switch">
+                    <select name="language" id="language">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </nav>
+    
+        <div class="search-section">
+            <input type="text" class="topic-filter" placeholder="Articles relating to DEI in workplaces">
+                </div>
+    
+        <main class="articles-container">
+            <!-- Article 1 -->
+            <div class="article-card">
+                <div class="article-content">
+                    <h2 class="article-link">
+                        <a href="http://127.0.0.1:5500/Articles2.html">Diversity, Equity and Inclusion in the Workplace</a>
+                    </h2>
+                    <p class="article-description">Describing the use of DEI in workplaces all across the world, making sure all people get equal opportunities and ideas are shared </p>
+                        <p> to cultivate something better.</p>
+                </div>
+                <div class="article-image">
+                    <img src="https://www.workforcecampaigns.com/wp-content/uploads/2023/05/DEI-in-the-workplace-blog.jpg" alt="People working together in workplace" style="width:800px;height:200px;"> 
+                </div>
+            </div>
+            </div>
+    
+            <!-- Article 2 -->
+            <div class="article-card">
+                <div class="article-content">
+                    <h2 class="article-title">DEI: What It Is & How to Champion It in the Workplace</h2>
+                    <p class="article-description">If you want to champion diversity, equity, and inclusion at your organization, here's an overview of DEI’s goals and how you can implement it.</p>
+                </div>
+                <div class="article-image">
+                    <img src="https://cloudinary.hbs.edu/hbsit/image/upload/s--7hA6ehvi--/f_auto,c_fill,h_375,w_750,/v20200101/58081250B8DBF02F3D3AE039FFED33B1.jpg" alt="People working together in workplace" style="width:800px;height:200px;"> 
+                </div>
+            </div>
+    
+            <!-- Article 3 -->
+            <div class="article-card">
+                <div class="article-content">
+                    <h2 class="article-title">DEI in the workplace: Why it’s important for company culture</h2>
+                    <p class="article-description">Understand the importance to have diverse and inclusive workplaces.</p>
+                </div>
+                <div class="article-image">
+                    <img src="https://lpsonline.sas.upenn.edu/sites/default/files/2023-03/plpso-feature-dei-in-the-workplace.jpg" style="width:800px;height:200px;"> 
+                </div>
+        </main>
+    
+          <!-- Chatbot container with iframe and button -->
+    <div class="chatbot-container">
+        <!-- Chatbot iframe (hidden initially) -->
+        <iframe
+            class="chatbot-iframe"
+            allow="microphone;"
+            width="350"
+        height="430"
+            src="https://console.dialogflow.com/api-client/demo/embedded/6479ed72-8bb5-4ab0-aeaf-fcb42d64c877">
+        </iframe>
+
+        <!-- Chatbot toggle button -->
+        <button class="chat-button" onclick="toggleChat()"> AI Chat</button>
+    </div>
+
+    <!-- JavaScript for toggling the chatbot iframe -->
+    <script>
+        function toggleChat() {
+            const iframe = document.querySelector('.chatbot-iframe');
+            const button = document.querySelector('.chat-button');
+
+            if (iframe.style.display === 'none' || iframe.style.display === '') {
+                iframe.style.display = 'block';
+                button.textContent = 'Close AI Chat';
+            } else {
+                iframe.style.display = 'none';
+                button.textContent = 'Open AI Chat';
+            }
+        }
+    </script>
+
+</body>
+</html>
+</body>
+</html>
